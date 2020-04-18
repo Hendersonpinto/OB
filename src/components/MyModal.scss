@@ -1,0 +1,36 @@
+.modal-content {
+  background-color: whitesmoke;
+  width: 100vw;
+
+  .item__list {
+    padding: 50px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 10px;
+
+    .product__image {
+      position: relative;
+      img {
+        width: 100%;
+      }
+
+      .product__quantity {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        margin: 0px;
+        background-color: black;
+        padding: 10px;
+        color: whitesmoke;
+      }
+    }
+
+    .product__details {
+      display: flex;
+      :first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &__content {
+    color: #ffaeae;
+    width: 70%;
+    text-align: center;
+    h1 {
+      font-family: "Didact Gothic";
+      font-size: 3rem;
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+    background-color: rgb(245, 244, 244);
+    font-family: "Playfair Display", serif;
+    border-color: none;
+    color: black;
+  }
+
+  &__video {
+    position: absolute;
+    filter: brightness(50%);
+    z-index: -1;
+  }
+}

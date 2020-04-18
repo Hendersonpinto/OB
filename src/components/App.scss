@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  p {
+    font-family: "Didact Gothic", sans-serif;
+    margin: 0px;
+  }
+
+  h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+  }
+  .collection__wrapper {
+    margin-top: 100px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start; /* <-- this is the fix */
+
+    .collection__title {
+      text-align: center;
+    }
+    .collection {
+      display: flex;
+
+      padding: 20px 50px;
+    }
+  }
+}
