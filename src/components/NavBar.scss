@@ -7,8 +7,12 @@
   .bagNavbar {
     width: 20px;
   }
-  .logoNavbar {
-    width: 80px;
+
+  .navbar-brand {
+    display: flex;
+    .logoNavbar {
+      width: 80px;
+    }
   }
 
   &__links {
@@ -36,8 +40,10 @@
   }
 
   @media only screen and (min-width: 800px) {
-    .logoNavbar {
-      width: 200px;
+    .navbar-brand {
+      .logoNavbar {
+        width: 200px;
+      }
     }
 
     &__links {
