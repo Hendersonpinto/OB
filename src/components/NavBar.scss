@@ -10,8 +10,9 @@
 
   .navbar-brand {
     display: flex;
+    width: 80px;
     .logoNavbar {
-      width: 80px;
+      width: 100%;
     }
   }
 
@@ -41,11 +42,11 @@
 
   @media only screen and (min-width: 800px) {
     .navbar-brand {
+      width: 200px;
       .logoNavbar {
-        width: 200px;
+        width: 100%;
       }
     }
-
     &__links {
       .nav-link {
         padding: 0.5rem 1rem;
