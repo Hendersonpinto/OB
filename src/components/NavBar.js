@@ -18,6 +18,7 @@ class NavBar extends React.Component {
     return genders.map((gender) => {
       return (
         <Nav.Link
+          className="navbar__link"
           data-filtervalue={gender}
           data-filterattr="gender"
           onClick={(e) => filterProducts(e.target)}
@@ -35,6 +36,7 @@ class NavBar extends React.Component {
           <img
             alt=""
             src={logo}
+            width="200px"
             className="d-inline-block align-top logoNavbar"
           />
         </Navbar.Brand>
@@ -42,7 +44,11 @@ class NavBar extends React.Component {
           {this.renderLinks(this.props)}
           <Nav.Link href="#features" onClick={() => this.props.showModal()}>
             <BagCounter />
-            <img src={bag} className="d-inline-block align-top bagNavbar" />
+            <img
+              src={bag}
+              width="30px"
+              className="d-inline-block align-top bagNavbar"
+            />
           </Nav.Link>
         </div>
       </Navbar>
