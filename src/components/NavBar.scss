@@ -1,9 +1,32 @@
+@import "./variables.scss";
+
 .navbar {
   display: flex;
   justify-content: space-between;
   background-color: whitesmoke;
-  // background-color: rgba(255, 255, 255, 0);
+  .bagNavbar {
+    width: 20px;
+  }
+  .logoNavbar {
+    width: 80px;
+  }
 
+  &__links {
+    display: flex;
+    align-items: center;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      color: black;
+      font-size: 16px;
+      font-family: "Didact Gothic", sans-serif;
+      span {
+        color: black;
+        font-size: 16px;
+      }
+    }
+  }
   span {
     color: black;
     margin-right: 5px;
@@ -11,11 +34,21 @@
     font-size: 20px;
   }
 
-  // .logoNavbar {
-  //   filter: invert(1);
-  // }
+  @media only screen and (min-width: 800px) {
+    .logoNavbar {
+      width: 200px;
+    }
 
-  // .bagNavbar {
-  //   filter: invert(1);
-  // }
+    &__links {
+      .nav-link {
+        font-size: 20px;
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+    .bagNavbar {
+      width: 30px;
+    }
+  }
 }

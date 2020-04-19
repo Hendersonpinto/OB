@@ -31,6 +31,20 @@ const renderSizeFilters = ({ sizes, filterProducts }) => {
   });
 };
 
+const renderGenderFilters = ({ sizes, filterProducts, genders }) => {
+  return genders.map((gender) => {
+    return (
+      <li
+        data-filtervalue={gender}
+        data-filterattr="gender"
+        onClick={(e) => filterProducts(e.target)}
+      >
+        <p>{gender}</p>
+      </li>
+    );
+  });
+};
+
 const Filters = (props) => {
   return (
     <div className="filters">
@@ -42,6 +56,10 @@ const Filters = (props) => {
       <div className="filter--size">
         <p>Size:</p>
         <ul className="filter--size__list">{renderSizeFilters(props)}</ul>
+      </div>
+      <div className="filter--gender">
+        <p>Gender:</p>
+        <ul className="filter--color__list">{renderGenderFilters(props)}</ul>
       </div>
     </div>
   );

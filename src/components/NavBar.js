@@ -10,6 +10,24 @@ import "./NavBar.scss";
 import BagCounter from "./BagCounter";
 
 class NavBar extends React.Component {
+  capitalize(string) {
+    return string[0].toUpperCase() + string.slice(1);
+  }
+
+  renderLinks({ genders, filterProducts }) {
+    return genders.map((gender) => {
+      return (
+        <Nav.Link
+          data-filtervalue={gender}
+          data-filterattr="gender"
+          onClick={(e) => filterProducts(e.target)}
+        >
+          {this.capitalize(gender)}
+        </Nav.Link>
+      );
+    });
+  }
+
   render() {
     return (
       <Navbar fixed="top">
@@ -17,18 +35,16 @@ class NavBar extends React.Component {
           <img
             alt=""
             src={logo}
-            width="200px"
             className="d-inline-block align-top logoNavbar"
           />
         </Navbar.Brand>
-        <Nav.Link href="#features" onClick={() => this.props.showModal()}>
-          <BagCounter />
-          <img
-            src={bag}
-            width="30px"
-            className="d-inline-block align-top bagNavbar"
-          />
-        </Nav.Link>
+        <div className="navbar__links">
+          {this.renderLinks(this.props)}
+          <Nav.Link href="#features" onClick={() => this.props.showModal()}>
+            <BagCounter />
+            <img src={bag} className="d-inline-block align-top bagNavbar" />
+          </Nav.Link>
+        </div>
       </Navbar>
     );
   }

@@ -22,6 +22,7 @@ class ProductsList extends React.Component {
         <div
           className={`product__card ${available}`}
           onClick={(e) => {
+            console.log(e.target);
             this.props.addToCart(product);
           }}
           key={product.id}

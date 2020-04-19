@@ -17,4 +17,4 @@ setTimeout(function () {
     </Provider>,
     document.getElementById("root")
   );
-}, 2800);
+}, 4000);

@@ -7,6 +7,10 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-column-gap: 10px;
 
+  .product__card.sold-out {
+    pointer-events: none;
+  }
+
   .product__image {
     position: relative;
     cursor: pointer;

@@ -35,13 +35,18 @@
         padding: 10px;
         color: whitesmoke;
       }
+
+      .removeButton {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        background-color: $warning;
+      }
     }
 
     .product__details {
       display: flex;
-      :first-child {
-        margin-right: 20px;
-      }
+      justify-content: space-around;
     }
   }
 }

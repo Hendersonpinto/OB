@@ -1,4 +1,8 @@
-import { ADD_TO_CART, FILTER_PRODUCTS } from "../actions/types";
+import {
+  ADD_TO_CART,
+  FILTER_PRODUCTS,
+  REMOVE_FROM_CART,
+} from "../actions/types";
 
 const INITIAL_STATE = {
   stock: [
@@ -11,6 +15,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_nude_web_1_a580eae0-be6f-488c-895b-9530c8964965.jpg?v=1585820383",
       color: "Rose Nude",
       size: "L",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -21,6 +26,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_nude_web_1_a580eae0-be6f-488c-895b-9530c8964965.jpg?v=1585820383",
       color: "Rose Nude",
       size: "M",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -31,6 +37,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_nude_web_1_a580eae0-be6f-488c-895b-9530c8964965.jpg?v=1585820383",
       color: "Rose Nude",
       size: "S",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -41,6 +48,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_nude_web_1_a580eae0-be6f-488c-895b-9530c8964965.jpg?v=1585820383",
       color: "Rose Nude",
       size: "XS",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -51,6 +59,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_black_web_1.jpg?v=1585820383",
       color: "Black",
       size: "XL",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -61,6 +70,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_black_web_1.jpg?v=1585820383",
       color: "Black",
       size: "L",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -71,6 +81,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_black_web_1.jpg?v=1585820383",
       color: "Black",
       size: "M",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -81,6 +92,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_black_web_1.jpg?v=1585820383",
       color: "Black",
       size: "S",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -91,6 +103,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_black_web_1.jpg?v=1585820383",
       color: "Black",
       size: "XS",
+      gender: "women",
     },
     {
       title: "Organic Cotton Triangle Bra",
@@ -101,6 +114,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/w_oc_trianglebra_nude_web_1_a580eae0-be6f-488c-895b-9530c8964965.jpg?v=1585820383",
       color: "Rose Nude",
       size: "XL",
+      gender: "women",
     },
     {
       title: "Organic Cotton Tee",
@@ -111,6 +125,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_black_web_5.jpg?v=1574888373",
       color: "Black",
       size: "XL",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -121,6 +136,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_navy_web_2.jpg?v=1574888390",
       color: "Navy",
       size: "XL",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -131,6 +147,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_black_web_5.jpg?v=1574888373",
       color: "Black",
       size: "S",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -141,6 +158,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_black_web_5.jpg?v=1574888373",
       color: "Black",
       size: "M",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -151,6 +169,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_black_web_5.jpg?v=1574888373",
       color: "Black",
       size: "L",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -161,6 +180,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_navy_web_2.jpg?v=1574888390",
       color: "Navy",
       size: "XXL",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -171,6 +191,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_black_web_5.jpg?v=1574888373",
       color: "Black",
       size: "XXL",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -181,6 +202,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_white_web_3.jpg?v=1574888390",
       color: "White",
       size: "S",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -191,6 +213,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_white_web_3.jpg?v=1574888390",
       color: "White",
       size: "M",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -201,6 +224,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_white_web_3.jpg?v=1574888390",
       color: "White",
       size: "L",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -211,6 +235,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_white_web_3.jpg?v=1574888390",
       color: "White",
       size: "XL",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -221,6 +246,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_white_web_3.jpg?v=1574888390",
       color: "White",
       size: "XXL",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -231,6 +257,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/organic_basics_mens_organic_cotton_tee_grey_web_3.jpg?v=1574888390",
       color: "Grey",
       size: "S",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -241,6 +268,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/organic_basics_mens_organic_cotton_tee_grey_web_3.jpg?v=1574888390",
       color: "Grey",
       size: "M",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -251,6 +279,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/organic_basics_mens_organic_cotton_tee_grey_web_3.jpg?v=1574888390",
       color: "Grey",
       size: "L",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -261,6 +290,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/organic_basics_mens_organic_cotton_tee_grey_web_3.jpg?v=1574888390",
       color: "Grey",
       size: "XL",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -271,6 +301,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/organic_basics_mens_organic_cotton_tee_grey_web_3.jpg?v=1574888390",
       color: "Grey",
       size: "XXL",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -281,6 +312,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_navy_web_2.jpg?v=1574888390",
       color: "Navy",
       size: "S",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -291,6 +323,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_navy_web_2.jpg?v=1574888390",
       color: "Navy",
       size: "M",
+      gender: "men",
     },
     {
       title: "Organic Cotton Tee",
@@ -301,6 +334,7 @@ const INITIAL_STATE = {
         "https://cdn.shopify.com/s/files/1/0076/7800/1222/products/m_oc_tee_navy_web_2.jpg?v=1574888390",
       color: "Navy",
       size: "L",
+      gender: "men",
     },
   ],
   addedItems: [],
@@ -308,6 +342,7 @@ const INITIAL_STATE = {
   filteredItems: [],
   colors: ["Black", "Navy", "Rose Nude", "Grey", "White"],
   sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+  genders: ["men", "women"],
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -341,9 +376,26 @@ export default (state = INITIAL_STATE, action) => {
         }
       }
     }
+    case REMOVE_FROM_CART: {
+      let removedItem = state.addedItems.find(
+        (item) => item.id === action.payload.id
+      );
+      return {
+        ...state,
+        totalPrice:
+          state.totalPrice -
+          parseFloat(removedItem.price.match("-?[0-9]+[.]*[0-9]*")) *
+            removedItem.quantity,
+        addedItems: [
+          ...state.addedItems.filter((item) => {
+            return item.id !== removedItem.id;
+          }),
+        ],
+      };
+    }
     case FILTER_PRODUCTS: {
       const filteredItems = state.stock.filter((item) => {
-        console.log("My actual item is");
+        // console.log("My actual item is");
         // console.log(item);
         return item[action.payload.filterBy] === action.payload.filterValue;
       });

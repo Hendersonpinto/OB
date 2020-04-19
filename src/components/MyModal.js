@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import logo from "../images/logo.svg";
 import "./MyModal.scss";
 
-const renderAddedItems = (addeditems) => {
+const renderAddedItems = (addeditems, removeItem) => {
   const productQuantity = (product) => {
     return product.quantity > 1 ? (
       <p className="product__quantity">{product.quantity}</p>
@@ -20,12 +20,28 @@ const renderAddedItems = (addeditems) => {
           <div className="product__image">
             <img src={product.image_link} />
             {productQuantity(product)}
+            <Button
+              className="removeButton"
+              variant="secondary"
+              size="md"
+              onClick={() => removeItem(product)}
+            >
+              remove
+            </Button>
           </div>
           <div className="product__description">
-            <p>{product.title}</p>
+            <p style={{ textDecoration: "underline" }}>{product.title}</p>
             <div className="product__details">
-              <p>Size: {product.size}</p>
+              <p>
+                Size: <span>{product.size}</span>
+              </p>
               <p>Color: {product.color}</p>
+              <p>
+                Price:{" "}
+                {parseFloat(product.price.match("-?[0-9]+[.]*[0-9]*")) *
+                  product.quantity}{" "}
+                €
+              </p>
             </div>
           </div>
         </div>
@@ -51,12 +67,16 @@ const MyModal = (props) => {
       </Modal.Header>
       <Modal.Body>
         <h4>Your Bag</h4>
-        <div className="item__list">{renderAddedItems(props.addeditems)}</div>
+        <div className="item__list">
+          {renderAddedItems(props.addeditems, props.removeitem)}
+        </div>
         <h3>Total: {props.totalprice} EUR</h3>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" size="lg" block onClick={props.onHide}>
-          {props.addeditems.length > 0 ? "Go to check out" : "Go back to store"}
+          {props.addeditems.length > 0
+            ? "Proceed to check out"
+            : "Go back to store"}
         </Button>
       </Modal.Footer>
     </Modal>
