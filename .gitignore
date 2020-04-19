@@ -9,6 +9,7 @@
 
 # production
 /build
+/productionmode
 
 # misc
 .DS_Store
