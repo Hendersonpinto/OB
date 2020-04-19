@@ -1,7 +1,8 @@
 .filters {
+  align-self: flex-start;
   position: sticky;
   position: -webkit-sticky;
-  top: 10;
+  top: 70px;
 
   width: 30%;
   margin-right: 20px;
@@ -25,22 +26,24 @@
       height: 20px;
       margin-right: 10px;
       border-radius: 5px;
+
+      & + * {
+        pointer-events: none;
+      }
       &.Black {
-        background-color: black;
+        background-color: #3c3c3c;
       }
       &.Navy {
-        background-color: navy;
+        background-color: #535378;
       }
       &.Rose {
         background-color: pink;
       }
       &.Grey {
-        background-color: grey;
-        border: solid 1px;
+        background-color: #ababab;
       }
       &.White {
-        border: solid 1px;
-        background-color: whitesmoke;
+        background-color: white;
       }
     }
   }

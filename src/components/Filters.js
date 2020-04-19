@@ -10,8 +10,8 @@ const renderColorFilters = ({ colors, filterProducts }) => {
         data-filterattr="color"
         onClick={(e) => filterProducts(e.target)}
       >
-        <span className={`color-label ${color}`}></span>
-        {color}
+        <div className={`color-label ${color}`}></div>
+        <p style={{ width: "50%" }}>{color}</p>
       </li>
     );
   });

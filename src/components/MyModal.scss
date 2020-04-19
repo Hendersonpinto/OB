@@ -1,12 +1,23 @@
+@import "./variables.scss";
+
 .modal-content {
-  background-color: whitesmoke;
+  background-color: $primary;
   width: 100vw;
+
+  .modal-header {
+    border-bottom: 1px solid rgb(31, 58, 41);
+  }
+
+  .modal-footer {
+    border-top: 1px solid rgb(31, 58, 41);
+  }
 
   .item__list {
     padding: 50px;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 0.5fr));
     grid-column-gap: 10px;
 
     .product__image {

@@ -16,7 +16,7 @@ function App(props) {
       <NavBar></NavBar>
       <Hero></Hero>
       <section className="collection__wrapper">
-        <h1 className="collection__title">OB20 COLLECTION</h1>
+        <h1 className="collection__title">SUMMER COLLECTION</h1>
         <div className="collection">
           <Filters
             filterProducts={props.filterProducts}

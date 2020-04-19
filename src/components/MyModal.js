@@ -24,8 +24,8 @@ const renderAddedItems = (addeditems) => {
           <div className="product__description">
             <p>{product.title}</p>
             <div className="product__details">
-              <p>{product.size}</p>
-              <p>{product.color}</p>
+              <p>Size: {product.size}</p>
+              <p>Color: {product.color}</p>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const MyModal = (props) => {
       <Modal.Body>
         <h4>Your Bag</h4>
         <div className="item__list">{renderAddedItems(props.addeditems)}</div>
-        <p>Total: {props.totalprice} EUR</p>
+        <h3>Total: {props.totalprice} EUR</h3>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" size="lg" block onClick={props.onHide}>

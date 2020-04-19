@@ -6,11 +6,11 @@ import { addToCart } from "../actions";
 import logo from "../images/logo.svg";
 
 class ProductsList extends React.Component {
-  checkAvailability(availability) {
-    if (availability === "out of stock") {
-      return <p className="notice">SOLD OUT</p>;
+  checkAvailability(product) {
+    if (product.availability === "out of stock") {
+      return <p className="notice sold-out">SOLD OUT</p>;
     }
-    return "";
+    return <p className="notice price">{product.price}</p>;
   }
 
   renderProducts() {
@@ -31,9 +31,9 @@ class ProductsList extends React.Component {
             <div className="product__label">
               <img alt="" src={logo} width="150px" />
               <h2>Add to cart</h2>
-              <p>{product.price}</p>
+              <p>{product.price} €</p>
             </div>
-            {this.checkAvailability(product.availability)}
+            {this.checkAvailability(product)}
           </div>
           <div className="product__description">
             <h3>{product.title}</h3>

@@ -10,9 +10,11 @@ import reducers from "./reducers";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-ReactDOM.render(
-  <Provider store={createStore(reducers, composeEnhancers())}>
-    <App />
-  </Provider>,
-  document.getElementById("root")
-);
+setTimeout(function () {
+  ReactDOM.render(
+    <Provider store={createStore(reducers, composeEnhancers())}>
+      <App />
+    </Provider>,
+    document.getElementById("root")
+  );
+}, 2800);
