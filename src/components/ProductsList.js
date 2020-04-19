@@ -30,7 +30,7 @@ class ProductsList extends React.Component {
             <img src={product.image_link} />
             <div className="product__label">
               <img alt="" src={logo} width="150px" />
-              <h2>Add to cart</h2>
+              <h2>Add to bag</h2>
               <p>{product.price} €</p>
             </div>
             {this.checkAvailability(product)}
