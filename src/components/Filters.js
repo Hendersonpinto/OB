@@ -1,6 +1,8 @@
+// Third Party
 import React from "react";
 
-import "./Filters.scss";
+// Local Files
+import "../stylesheets/Filters.scss";
 
 const renderColorFilters = ({ colors, filterProducts }) => {
   return colors.map((color) => {
@@ -9,6 +11,7 @@ const renderColorFilters = ({ colors, filterProducts }) => {
         data-filtervalue={color}
         data-filterattr="color"
         onClick={(e) => filterProducts(e.target)}
+        key={color}
       >
         <div className={`color-label ${color}`}></div>
         <p style={{ width: "50%" }}>{color}</p>
@@ -21,6 +24,7 @@ const renderSizeFilters = ({ sizes, filterProducts }) => {
   return sizes.map((size) => {
     return (
       <li
+        key={size}
         data-filtervalue={size}
         data-filterattr="size"
         onClick={(e) => filterProducts(e.target)}
@@ -35,11 +39,12 @@ const renderGenderFilters = ({ sizes, filterProducts, genders }) => {
   return genders.map((gender) => {
     return (
       <li
+        key={gender}
         data-filtervalue={gender}
         data-filterattr="gender"
         onClick={(e) => filterProducts(e.target)}
       >
-        <p>{gender}</p>
+        <p style={{ pointerEvents: "none" }}>{gender}</p>
       </li>
     );
   });

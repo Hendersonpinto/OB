@@ -1,0 +1,35 @@
+// COLOR PALETTE
+$primary: rgb(255, 235, 235);
+$secondary: #263f2f;
+$tertiary: #2d201b;
+$warning: #320000;
+
+// FONTS
+$heading: "Playfair Display", serif;
+$body: "Didact Gothic", sans-serif;
+
+// MIXINS
+@mixin flex-acenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-jcenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin ease-in-200 {
+  transition: all ease-in 200ms;
+}

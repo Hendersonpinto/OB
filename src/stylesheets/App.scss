@@ -1,0 +1,15 @@
+@import "./variables.scss";
+@import "~bootstrap/scss/bootstrap";
+
+.collection__wrapper {
+  margin-top: 100px;
+
+  .collection__title {
+    text-align: center;
+    font-family: $body;
+  }
+  .collection {
+    @include flex-center;
+    padding: 20px 50px;
+  }
+}

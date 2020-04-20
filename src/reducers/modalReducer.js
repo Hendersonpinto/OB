@@ -6,7 +6,7 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   if (action.type === SHOW_MODAL) {
-    return { ...state, show: !state.show };
+    return { ...state, show: !state.show, paid: false };
   }
   return state;
 };

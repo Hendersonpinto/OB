@@ -1,8 +1,10 @@
+// Third Party
 import React from "react";
 import Button from "react-bootstrap/Button";
 
+// Local Files
 import HeroVideo from "../images/herovideo.mp4";
-import "./Hero.scss";
+import "../stylesheets/Hero.scss";
 
 const Hero = () => {
   return (

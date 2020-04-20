@@ -4,12 +4,13 @@ import { createStore, compose } from "redux";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./index.scss";
+import "./stylesheets/index.scss";
 import App from "./components/App";
 import reducers from "./reducers";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+// SetTimeout simulates the loading of the website
 setTimeout(function () {
   ReactDOM.render(
     <Provider store={createStore(reducers, composeEnhancers())}>

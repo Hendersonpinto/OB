@@ -2,6 +2,8 @@ import {
   ADD_TO_CART,
   FILTER_PRODUCTS,
   REMOVE_FROM_CART,
+  CHECK_OUT,
+  SHOW_MODAL,
 } from "../actions/types";
 
 const INITIAL_STATE = {
@@ -343,6 +345,7 @@ const INITIAL_STATE = {
   colors: ["Black", "Navy", "Rose Nude", "Grey", "White"],
   sizes: ["XS", "S", "M", "L", "XL", "XXL"],
   genders: ["men", "women"],
+  paid: false,
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -401,6 +404,12 @@ export default (state = INITIAL_STATE, action) => {
       });
 
       return { ...state, filteredItems: filteredItems };
+    }
+    case CHECK_OUT: {
+      return { ...state, addedItems: [], totalPrice: 0, paid: true };
+    }
+    case SHOW_MODAL: {
+      return { ...state, paid: false };
     }
     default: {
       return { ...state, filteredItems: state.stock };

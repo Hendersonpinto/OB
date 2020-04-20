@@ -4,3 +4,4 @@ export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const SHOW_MODAL = "SHOW_MODAL";
 export const FILTER_PRODUCTS = "FILTER_PRODUCTS";
+export const CHECK_OUT = "CHECK_OUT";

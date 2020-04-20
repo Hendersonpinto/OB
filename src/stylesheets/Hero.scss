@@ -1,11 +1,9 @@
 @import "./variables.scss";
 
 .hero {
+  @include flex-center;
   position: relative;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 
   &__content {
@@ -13,15 +11,15 @@
     width: 70%;
     text-align: center;
     h1 {
-      font-family: "Didact Gothic";
+      font-family: $body;
       font-size: 3rem;
     }
   }
 
   &__button {
     margin-top: 20px;
-    background-color: rgb(245, 244, 244);
-    font-family: "Playfair Display", serif;
+    background-color: whitesmoke;
+    font-family: $heading;
     border-color: none;
     color: black;
   }

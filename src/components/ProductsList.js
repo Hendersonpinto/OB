@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import "./ProductsList.scss";
+import "../stylesheets/ProductsList.scss";
 import { addToCart } from "../actions";
 import logo from "../images/logo.svg";
 
@@ -22,15 +22,14 @@ class ProductsList extends React.Component {
         <div
           className={`product__card ${available}`}
           onClick={(e) => {
-            console.log(e.target);
             this.props.addToCart(product);
           }}
           key={product.id}
         >
           <div className={`product__image ${available}`}>
-            <img src={product.image_link} />
+            <img src={product.image_link} alt={product.title} />
             <div className="product__label">
-              <img alt="" src={logo} width="150px" />
+              <img alt="OB-logo" src={logo} width="150px" />
               <h2>Add to bag</h2>
               <p>{product.price} €</p>
             </div>

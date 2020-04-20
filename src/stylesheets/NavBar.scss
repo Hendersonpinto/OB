@@ -1,8 +1,7 @@
 @import "./variables.scss";
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  @include flex-between;
   background-color: whitesmoke;
   .bagNavbar {
     width: 20px;
@@ -12,16 +11,14 @@
   }
 
   &__links {
-    display: flex;
-    align-items: center;
+    @include flex-acenter;
 
     .nav-link {
+      @include flex-acenter;
       padding: 0.5rem 0.8rem;
-      display: flex;
-      align-items: center;
       color: black;
       font-size: 16px;
-      font-family: "Didact Gothic", sans-serif;
+      font-family: $body;
       span {
         color: black;
         font-size: 16px;
@@ -31,7 +28,7 @@
   span {
     color: black;
     margin-right: 5px;
-    font-family: "Didact Gothic", sans-serif;
+    font-family: $body;
     font-size: 20px;
   }
 

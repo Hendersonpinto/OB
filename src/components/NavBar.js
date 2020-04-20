@@ -1,12 +1,14 @@
+// Third Party
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { connect } from "react-redux";
 
+// Local files
 import { showModal } from "../actions";
 import logo from "../images/logo.svg";
 import bag from "../images/bag.svg";
-import "./NavBar.scss";
+import "../stylesheets/NavBar.scss";
 import BagCounter from "./BagCounter";
 
 class NavBar extends React.Component {
@@ -22,6 +24,7 @@ class NavBar extends React.Component {
           data-filtervalue={gender}
           data-filterattr="gender"
           onClick={(e) => filterProducts(e.target)}
+          key={gender}
         >
           {this.capitalize(gender)}
         </Nav.Link>
@@ -34,9 +37,8 @@ class NavBar extends React.Component {
       <Navbar fixed="top">
         <Navbar.Brand href="#home">
           <img
-            alt=""
+            alt="logo-navbar"
             src={logo}
-            width="200px"
             className="d-inline-block align-top logoNavbar"
           />
         </Navbar.Brand>
@@ -48,6 +50,7 @@ class NavBar extends React.Component {
               src={bag}
               width="30px"
               className="d-inline-block align-top bagNavbar"
+              alt="bag-icon"
             />
           </Nav.Link>
         </div>
