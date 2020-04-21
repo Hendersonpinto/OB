@@ -2,7 +2,7 @@
 
 .navbar {
   @include flex-between;
-  background-color: whitesmoke;
+  background-color: $pink;
   .bagNavbar {
     width: 20px;
   }
@@ -16,17 +16,17 @@
     .nav-link {
       @include flex-acenter;
       padding: 0.5rem 0.8rem;
-      color: black;
+      color: $secondary;
       font-size: 16px;
       font-family: $body;
       span {
-        color: black;
+        color: $secondary;
         font-size: 16px;
       }
     }
   }
   span {
-    color: black;
+    color: $secondary;
     margin-right: 5px;
     font-family: $body;
     font-size: 20px;
